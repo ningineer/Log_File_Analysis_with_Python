@@ -35,3 +35,12 @@ This project is a Python-based log file analysis tool designed to automate log f
    python log_analysis.py example_log.txt
 
 3. View the results in the console, or check the output file in the `output/` directory for a detailed report.
+
+## Script Explanation
+- Imports: The re module for regex filtering and datetime to timestamp the output file.
+- Paths: Defines paths for the input log (example_log.txt) and the output file, which will be named with the current timestamp.
+- parse_logs():
+   - Searches each line of the log file for specific keywords (e.g., "ERROR" or "WARNING").
+   - Writes matched lines to an output file for easy review.
+   - Optionally prints matches to the console.
+- Main Execution: Calls parse_logs() if the script is run directly, allowing it to be reused in other scripts if imported.
